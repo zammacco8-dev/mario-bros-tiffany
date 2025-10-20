@@ -39,24 +39,26 @@ hr.sep{border:none;border-top:1px dashed #970000;margin:4px 0 0}
 ul.inline{list-style:none;margin:8px 0 0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
 ul.inline li{font-size:12px;background:#0b0b0b;border:1px solid #1f1f1f;padding:6px 10px;border-radius:999px;color:#fff}
 .req{color:#ffb4b4}
+details.rules > summary{cursor:pointer;font-weight:900;letter-spacing:.3px;color:#fff}
+details.rules{background:#c30b05;border:1px solid #7a0000;border-radius:14px;padding:14px}
 </style>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <img src="data:image/png;base64,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" alt="RockLOL" title="RockLOL">
+      <img src="data:image/png;base64,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" alt="RockLOL">
     </header>
 
     <section class="card hero">
       <h1>MODULO DI ISCRIZIONE DEL TORNEO: MARIO BROS VOL.1 – THE ORIGINAL</h1>
-      <p>📅 <strong>Lunedì 24 Novembre 2025</strong> · 🕘 <strong>ore 21:00</strong> · 📍 Tiffany Café, Pontecorvo (FR) · 💶 <strong>€10</strong></p>
+      <p>Data: <strong>Lunedì 24 Novembre 2025</strong> · Orario: <strong>21:00</strong> · Luogo: Tiffany Café, Pontecorvo (FR) · Quota: <strong>€10</strong></p>
     </section>
 
     <form class="card form" method="POST" action="https://formsubmit.co/zammacco8@gmail.com" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Iscrizione Torneo Mario Bros · Tiffany Café">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Grazie per l'iscrizione al TORNEO MARIO BROS @ TIFFANY CAFÉ!&#10;📅 Data: Lunedì 24 Novembre 2025 — ore 21:00&#10;📍 Luogo: Tiffany Café, Pontecorvo (FR)&#10;💳 Quota: €10&#10;&#10;PAGAMENTO (scegli 1 metodo):&#10;• Postepay: ricarica alla carta indicata nel post/DM. Inserisci Causale: &quot;Iscrizione Mario Bros + Nome Cognome&quot;.&#10;• P2P (bonifico istantaneo/PayPal/Satispay): invia €10 al riferimento indicato nel post/DM con stessa causale.&#10;&#10;IMPORTANTISSIMO: se non l’hai già fatto nel form, carica la ricevuta o lo screenshot del pagamento riportando NOME e COGNOME.&#10;&#10;Ti risponderemo via e‑mail/DM per confermare l’iscrizione.&#10;Per qualsiasi info: @ZEDJAY — zammacco8@gmail.com&#10;">
+      <input type="hidden" name="_autoresponse" value="Conferma iscrizione al Torneo Mario Bros Vol.1 (NES)&#10;&#10;Grazie per la tua iscrizione al torneo presso Tiffany Café.&#10;&#10;Dettagli evento:&#10;- Data: Lunedì 24 Novembre 2025&#10;- Orario: ore 21:00 (presentati alle 20:30 per la registrazione in sede)&#10;- Luogo: Tiffany Café – Pontecorvo (FR)&#10;- Quota di iscrizione: 10,00 EUR&#10;&#10;Pagamento (scegli uno dei metodi):&#10;- Postepay: ricarica alla carta comunicata nel post/DM. Causale: Iscrizione Mario Bros + Nome Cognome.&#10;- P2P (bonifico istantaneo/PayPal/Satispay): invia 10,00 EUR al riferimento comunicato nel post/DM con la stessa causale.&#10;&#10;Importante: al termine del pagamento allega la ricevuta o lo screenshot in risposta a questa email, assicurandoti che siano visibili importo, data, nome e cognome.&#10;&#10;Regolamento: trovi il regolamento completo nella pagina di iscrizione, nella sezione a tendina &quot;Regolamento Ufficiale&quot;. La partecipazione implica l'accettazione integrale del regolamento e della liberatoria.&#10;&#10;Assistenza: per qualsiasi necessità rispondi a questa email oppure scrivi a zammacco8@gmail.com.&#10;&#10;A presto,&#10;Staff Organizzazione – Tiffany Café / ROCKLOL&#10;">
       <input type="hidden" name="_next" value="thanks.html">
 
       <div class="row">
@@ -73,7 +75,7 @@ ul.inline li{font-size:12px;background:#0b0b0b;border:1px solid #1f1f1f;padding:
       <div class="row">
         <div>
           <label for="nickname">Nickname (facoltativo)</label>
-          <input id="nickname" name="Nickname" type="text" placeholder="8‑bitHero">
+          <input id="nickname" name="Nickname" type="text" placeholder="8-bit Hero">
         </div>
         <div>
           <label for="telefono">Telefono <span class="req">*</span></label>
@@ -85,7 +87,7 @@ ul.inline li{font-size:12px;background:#0b0b0b;border:1px solid #1f1f1f;padding:
         <div>
           <label for="email">Email per conferma <span class="req">*</span></label>
           <input id="email" name="email" type="email" required placeholder="tuo@email.it">
-          <div class="note">Riceverai una mail con istruzioni pagamento (Postepay / P2P) e i dettagli evento.</div>
+          <div class="note">Riceverai un'email con le istruzioni di pagamento e i dettagli dell'evento.</div>
         </div>
         <div>
           <label for="metodo">Metodo di pagamento <span class="req">*</span></label>
@@ -101,62 +103,68 @@ ul.inline li{font-size:12px;background:#0b0b0b;border:1px solid #1f1f1f;padding:
       <div>
         <label for="ricevuta">Carica ricevuta/screenshot pagamento (JPG/PNG, max 5MB)</label>
         <input id="ricevuta" name="attachment" type="file" accept="image/png,image/jpeg">
-        <div class="helper">Assicurati che nello screenshot siano visibili importo, data e <strong>nome e cognome</strong>.</div>
+        <div class="helper">Assicurati che nello screenshot siano visibili importo, data e nome e cognome.</div>
       </div>
 
       <div>
         <label for="note">Note (facoltative)</label>
-        <textarea id="note" name="Note" rows="4" placeholder="Es. allergie, preferenze orarie, altro…"></textarea>
+        <textarea id="note" name="Note" rows="4" placeholder="Es. allergie, preferenze orarie, altro..."></textarea>
       </div>
 
-      
-<section class="card" style="padding:18px">
-  <details style="background:#c30b05;border:1px solid #7a0000;border-radius:14px;padding:14px">
-    <summary style="cursor:pointer;font-weight:900;letter-spacing:.3px;color:#fff">📜 REGOLAMENTO UFFICIALE (clicca per aprire)</summary>
-    <div style="margin-top:12px;color:#fff;line-height:1.6">
-      <h3 style="margin:8px 0 4px;font-size:16px">🎮 TORNEO “MARIO BROS – THE ORIGINAL NES” @ TIFFANY CAFÉ</h3>
-      <p>📅 Data evento: <strong>Lunedì 24 Novembre 2025</strong><br>
-         🕘 Orario inizio: <strong>ore 21:00</strong><br>
-         📍 Luogo: <strong>Tiffany Café – Pontecorvo (FR)</strong><br>
-         💰 Quota d’iscrizione: <strong>€ 10</strong><br>
-         🎮 Console di gioco: <strong>Nintendo NES originale + cartuccia originale MARIO BROS (1983)</strong><br>
-         🏆 Premio: <em>da definire</em> (es. consumazione + gadget Nintendo retro)</p>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 1 – Partecipazione</h4>
-      <p>Il torneo è aperto a tutti. Per partecipare è necessario:<br>
-      • Versare la quota d’iscrizione di € 10 al Tiffany Café (entro 23 novembre 2025).<br>
-      • Firmare la liberatoria di responsabilità, con cui il giocatore si impegna a utilizzare correttamente la console NES e il relativo software, assumendosi ogni eventuale costo per danni derivanti da uso improprio dell’hardware o del software.</p>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 2 – Formato del Torneo</h4>
-      <p>L’organizzazione sceglierà il formato in base al numero di iscritti:</p>
-      <ul style="margin:6px 0 6px 18px">
-        <li><strong>Molti iscritti:</strong> gironi all’italiana (ogni giocatore disputa due partite; i migliori avanzano).</li>
-        <li><strong>Pochi iscritti:</strong> eliminazione diretta con scontri al meglio dei 3 round (2/3).</li>
-      </ul>
-      <p>Ogni sfida si svolgerà uno contro uno, sullo stesso schermo, alternando i turni “Mario” vs “Luigi”.</p>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 3 – Durata e Vittoria della Partita</h4>
-      <ul style="margin:6px 0 6px 18px">
-        <li>Ogni partita dura massimo <strong>300 secondi (5 minuti)</strong>.</li>
-        <li>Se uno dei due giocatori perde tutte le vite → <strong>vince l’altro</strong>.</li>
-        <li>Se entrambi sopravvivono fino allo scadere del tempo → <strong>vince il punteggio più alto</strong>.</li>
-        <li>In caso di pareggio perfetto → <strong>round “sudden death” da 60 secondi</strong>.</li>
-      </ul>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 4 – Comportamento e Fair Play</h4>
-      <ul style="margin:6px 0 6px 18px">
-        <li>Vietato manomettere la console o l’ambiente di gioco.</li>
-        <li>Vietate pause non autorizzate e qualsiasi forma di disturbo all’avversario.</li>
-        <li>Chi provoca danni all’attrezzatura risponderà secondo la liberatoria firmata.</li>
-        <li>Gli arbitri (staff ROCKLOL) hanno potere decisionale insindacabile.</li>
-      </ul>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 5 – Finale Assoluta</h4>
-      <p>I vincitori di ogni edizione del torneo “Mario Bros VOL.1” si sfideranno nella <strong>Finalissima Primaverile 2026</strong>, dove verrà incoronato il <strong>Campione Mario Bros Pontecorvo 2025/26</strong>.</p>
-      <h4 style="margin:12px 0 6px;font-size:15px">Art. 6 – Premi</h4>
-      <ul style="margin:6px 0 0 18px">
-        <li><strong>50€ in contanti</strong></li>
-        <li><strong>Accesso gratuito alla Finalissima</strong> (L'iscrizione a franchigia, senza aver vinto un torneo, per la finalissima è di 25€)</li>
-      </ul>
-    </div>
-  </details>
-</section>
-<div>
+      <section class="card" style="padding:18px">
+        <details class="rules">
+          <summary>Regolamento Ufficiale (clicca per aprire)</summary>
+          <div style="margin-top:12px;color:#fff;line-height:1.6">
+<h3 style="margin:8px 0 4px;font-size:16px">Torneo “MARIO BROS – THE ORIGINAL NES” @ TIFFANY CAFÉ</h3>
+<p>Data evento: <strong>Lunedì 24 Novembre 2025</strong><br>
+Orario inizio: <strong>ore 21:00</strong><br>
+Luogo: <strong>Tiffany Café – Pontecorvo (FR)</strong><br>
+Quota d’iscrizione: <strong>€ 10</strong><br>
+Console di gioco: <strong>Nintendo NES originale + cartuccia originale MARIO BROS (1983)</strong><br>
+Premio: <em>da definire</em> (es. consumazione + gadget Nintendo retro)</p>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 1 – Partecipazione</h4>
+<p>Il torneo è aperto a tutti. Per partecipare è necessario:<br>
+• Versare la quota d’iscrizione di € 10 al Tiffany Café (entro 23 novembre 2025).<br>
+• Firmare la liberatoria di responsabilità, con cui il giocatore si impegna a utilizzare correttamente la console NES e il relativo software, assumendosi ogni eventuale costo per danni derivanti da uso improprio dell’hardware o del software.</p>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 2 – Formato del Torneo</h4>
+<p>L’organizzazione sceglierà il formato in base al numero di iscritti:</p>
+<ul style="margin:6px 0 6px 18px">
+  <li><strong>Molti iscritti:</strong> gironi all’italiana (ogni giocatore disputa due partite; i migliori avanzano).</li>
+  <li><strong>Pochi iscritti:</strong> eliminazione diretta con scontri al meglio dei 3 round (2/3).</li>
+</ul>
+<p>Ogni sfida si svolgerà uno contro uno, sullo stesso schermo, alternando i turni “Mario” vs “Luigi”.</p>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 3 – Durata e Vittoria della Partita</h4>
+<ul style="margin:6px 0 6px 18px">
+  <li>Ogni partita dura massimo <strong>300 secondi (5 minuti)</strong>.</li>
+  <li>Se uno dei due giocatori perde tutte le vite → <strong>vince l’altro</strong>.</li>
+  <li>Se entrambi sopravvivono fino allo scadere del tempo → <strong>vince il punteggio più alto</strong>.</li>
+  <li>In caso di pareggio perfetto → <strong>round “sudden death” da 60 secondi</strong>.</li>
+</ul>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 4 – Comportamento e Fair Play</h4>
+<ul style="margin:6px 0 6px 18px">
+  <li>Vietato manomettere la console o l’ambiente di gioco.</li>
+  <li>Vietate pause non autorizzate e qualsiasi forma di disturbo all’avversario.</li>
+  <li>Chi provoca danni all’attrezzatura risponderà secondo la liberatoria firmata.</li>
+  <li>Gli arbitri (staff ROCKLOL) hanno potere decisionale insindacabile.</li>
+</ul>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 5 – Finale Assoluta</h4>
+<p>I vincitori di ogni edizione del torneo “Mario Bros VOL.1” si sfideranno nella <strong>Finalissima Primaverile 2026</strong>, dove verrà incoronato il <strong>Campione Mario Bros Pontecorvo 2025/26</strong>.</p>
+
+<h4 style="margin:12px 0 6px;font-size:15px">Art. 6 – Premi</h4>
+<ul style="margin:6px 0 0 18px">
+  <li><strong>50€ in contanti</strong></li>
+  <li><strong>Accesso gratuito alla Finalissima</strong> (L'iscrizione a franchigia, senza aver vinto un torneo, per la finalissima è di 25€)</li>
+</ul>
+</div>
+        </details>
+      </section>
+
+      <div>
         <label><input type="checkbox" name="Accetto regolamento" required> Ho letto e accetto il regolamento del torneo e l'informativa privacy.</label>
         <hr class="sep">
       </div>
