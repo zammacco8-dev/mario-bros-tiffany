@@ -88,6 +88,7 @@ details.rules{background:#c30b05;border:1px solid #7a0000;border-radius:14px;pad
           <label for="email">Email per conferma <span class="req">*</span></label>
           <input id="email" name="email" type="email" required placeholder="tuo@email.it">
           <input type="hidden" id="_replyto" name="_replyto" value="">
+          <input type="hidden" id="_cc" name="_cc" value="">
           <div class="note">Riceverai un'email con le istruzioni di pagamento e i dettagli dell'evento.</div>
         </div>
         <div>
@@ -192,6 +193,23 @@ Premio: <em>da definire</em> (es. consumazione + gadget Nintendo retro)</p>
   function sync(){ if(email && reply){ reply.value = (email.value || '').trim(); } }
   if(email){ email.addEventListener('input', sync); email.addEventListener('change', sync); }
   if(f){ f.addEventListener('submit', function(e){ sync(); }); }
+})();
+</script>
+
+
+<script>
+(function(){
+  var f = document.querySelector('form');
+  var email = document.getElementById('email');
+  var reply = document.getElementById('_replyto');
+  var cc = document.getElementById('_cc');
+  function sync(){ 
+    var v = (email && email.value ? email.value.trim() : "");
+    if(reply) reply.value = v;
+    if(cc) cc.value = v;
+  }
+  if(email){ email.addEventListener('input', sync); email.addEventListener('change', sync); }
+  if(f){ f.addEventListener('submit', function(){ sync(); }); }
 })();
 </script>
 
